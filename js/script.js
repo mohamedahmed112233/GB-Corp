@@ -14,6 +14,7 @@ document.querySelector('#close-login-form').onclick = () =>{
   document.querySelector('.login-form-container').classList.remove('active');
 }
 
+
 window.onscroll = () =>{
 
   menu.classList.remove('fa-times');
@@ -130,3 +131,54 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+
+function showAlert1(){
+  var email = document.getElementById("sub_email").value.trim();
+  if(email === "" || email === null){
+    alert("Please enter an email to subscribe");
+  }else{
+    alert("Your email: "+ email +" is subscribed successfully");
+
+  }
+}
+function showAlert2(){
+  var name = document.getElementById("c_name").value.trim();
+  var email = document.getElementById("c_email").value.trim();
+  var tel = document.getElementById("c_tel").value.trim();
+  var msg = document.getElementById("c_msg").value.trim();
+
+  if(name === "" && email === "" && tel === "" && msg === ""){
+    alert("All the fields are empty");
+  }else if(name === "" && email === "" && tel === ""){
+    alert("Three Fields are empty, please fill them");
+  }else if(name === "" && email === "" && msg === ""){
+    alert("Three Fields are empty, please fill them");
+  }else if(name === "" && tel === "" && msg === ""){
+    alert("Three Fields are empty, please fill them");
+  }else if(email === "" && tel === "" && msg === ""){
+    alert("Three Fields are empty, please fill them");
+  }else if(name === "" && email === ""){
+    alert("Two Fields are empty, please fill them");
+  }else if(name === "" && tel === ""){
+    alert("Two Fields are empty, please fill them");
+  }else if(name === "" && msg === ""){
+    alert("Two Fields are empty, please fill them");
+  }else if(email === "" && tel === ""){
+    alert("Two Fields are empty, please fill them");
+  }else if(email === "" && msg === ""){
+    alert("Two Fields are empty, please fill them");
+  }else if(tel === "" && msg === ""){
+    alert("Two Fields are empty, please fill them");
+  }else if(name === ""){
+    alert("The name is empty");
+  }else if(email === ""){
+    alert("The email is empty");
+  }else if(tel === ""){
+    alert("The phone is empty");
+  }else if(msg === ""){
+    alert("The message is empty");
+  }else{
+    alert("Message sent successfully");
+  }
+  
+}
